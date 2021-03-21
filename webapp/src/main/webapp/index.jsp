@@ -37,7 +37,7 @@ Latest commit e193761 on Dec 8, 2016
 -->
 <html>
 	<head>
-		<title>Welcome</title>
+		<title>Welcome hemant devops page</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
