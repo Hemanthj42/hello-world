@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/Hemanthj42/hello-world.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        stage('deploy') {
+            steps {
+                sshagent(['deployuser']) {
+                    sh "scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@15.206.170.45:/opt/tomcat8/webapps"
+                }
+            }
+        }
+        
+    }
+}
